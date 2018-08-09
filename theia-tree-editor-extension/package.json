@@ -16,7 +16,6 @@
     "@theia/core": "latest",
     "@theia/filesystem": "latest",
     "@theia/editor": "latest",
-    "json-refs": "^3.0.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^4.4.9",
@@ -33,5 +32,9 @@
     "build": "tsc",
     "watch": "tsc -w"
   },
-  "theiaExtensions": []
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/theia-tree-editor-frontend-module"
+    }
+  ]
 }
