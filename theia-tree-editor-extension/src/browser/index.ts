@@ -1,1 +1,1 @@
-export * from './theia-tree-editor-open-handler';
+export * from './theia-tree-editor-widget';
