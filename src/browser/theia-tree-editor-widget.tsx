@@ -6,7 +6,7 @@ import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { TreeEditorSaveable } from './TreeEditorSaveable';
 import { inject, injectable } from 'inversify';
-import { Actions } from '@jsonforms/core';
+import { Actions, getData } from '@jsonforms/core';
 import { withProps } from 'recompose';
 
 export const TreeEditorWidgetOptions = Symbol('TreeEditorWidgetOptions');
@@ -73,4 +73,8 @@ export class TreeEditorWidget extends BaseWidget implements SaveableSource {
   close() {
     super.close();
   }
+
+  getRootData(): any {
+    return getData(this.store.getState());
+  };
 }
